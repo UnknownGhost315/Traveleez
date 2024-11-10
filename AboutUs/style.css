@@ -1,0 +1,148 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f4f4f4;
+    padding: 1em;
+}
+
+/* Header Styling */
+header {
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 1em;
+    text-align: center;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 2.2em;
+    margin-bottom: 0.5em;
+}
+
+/* About Us Section Styling */
+.about {
+    max-width: 1200px; /* Set a maximum width for the entire section */
+    margin: 0 auto;
+    padding: 2em 0;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Titles */
+.about h2 {
+    font-size: 2.2em;
+    color: #FF6B00;
+    font-weight: 700;
+    margin-bottom: 2em;
+}
+
+/* Create Grid Layout for About Items */
+.about-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 2em; /* Space between items */
+    justify-items: center;
+}
+
+/* About Item (Mission, Offers, Why Us) Styling */
+.about-item {
+    background-color: #FFFFFF;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Ensure items don’t stretch too wide */
+    opacity: 0;
+    animation: slideFadeIn 1s ease-out forwards;
+    position: relative;
+}
+
+/* Keyframes for Enhanced Fade-in Animation */
+@keyframes slideFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px) scale(0.95); /* Initial position and scale */
+    }
+    50% {
+        opacity: 0.7;
+        transform: translateY(10px) scale(1.02); /* Overshoot effect */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1); /* Settle to the final position */
+    }
+}
+
+/* Enhanced About Item (Mission, Offers, Why Us) Styling */
+.about-item {
+    background-color: #FFFFFF;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Ensure items don’t stretch too wide */
+    opacity: 0;
+    animation: slideFadeIn 1s ease-out forwards; /* Smooth entry animation */
+    position: relative;
+    transition: transform 0.3s ease-out;
+}
+
+/* Hover effect for a more dynamic feel */
+.about-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+
+/* About Item Header Styling */
+.about-item h3 {
+    font-size: 1.6em;
+    color: #FF6B00;
+    font-weight: 700;
+    margin-bottom: 0.8em;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333333;
+    color: #FFFFFF;
+    font-size: 0.9em;
+    border-radius: 10px;
+    margin-top: 2em;
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+    .about {
+        padding: 1em;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .about h2 {
+        font-size: 1.8em;
+    }
+
+    .about-item h3 {
+        font-size: 1.4em;
+    }
+}
+
